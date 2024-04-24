@@ -1,0 +1,47 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      Id sede:
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="siteActual.id">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      Dirección:
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="siteActual.direccion">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      Ciudad:
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="siteActual.ciudad">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      Fecha de registro:
+    </div>
+    <div class="col">
+      <input type="datetime-local" [(ngModel)]="siteActual.fechaRegistro">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      Area(m2):
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="siteActual.m2">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button type="button" class="btn btn-primary" (click)="insertSite()">Guardar</button>
+    </div>
+  </div>
+</div>

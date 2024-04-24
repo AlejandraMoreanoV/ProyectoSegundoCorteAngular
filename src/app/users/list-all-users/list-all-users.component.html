@@ -1,0 +1,47 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      Id sede:
+    </div>
+    <div class="col">
+      <input type="number" [(ngModel)]="siteFilter">
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-primary" (click)="searchUsersByIdSite()">Lista usuarios por sede</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      Nombre usuario:
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="nameFilter">
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-primary" (click)="searchUsersByNameUser()">Lista usuarios por nombre</button>
+    </div>
+  </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Nombre</th>
+    <th scope="col">Apellido</th>
+    <th scope="col">Fecha de inscripción</th>
+    <th scope="col">Mensualidad</th>
+  </tr>
+  </thead>
+  <tbody>
+    @for (userActual of usersAll; track userActual.id) {
+      <tr>
+        <td>{{ userActual.id }}</td>
+        <td>{{ userActual.nombre }}</td>
+        <td>{{ userActual.apellido }}</td>
+        <td>{{ userActual.fechaInscripcion }}</td>
+        <td>{{ userActual.mensualidad }}</td>
+      </tr>
+    }
+  </tbody>
+</table>

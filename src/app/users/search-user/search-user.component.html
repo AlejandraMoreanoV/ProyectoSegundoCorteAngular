@@ -1,0 +1,72 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      Id sede:
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="userActual.idSede">
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-primary" (click)="searchUserById()">Buscar por id</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      Id usuario:
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="userActual.id">
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-primary" (click)="searchUserByName()">Buscar por nombre</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      Nombre:
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="userActual.nombre">
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-primary" (click)="searchUserByIdAndName()">Buscar por id y nombre</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      Apellido:
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="userActual.apellido" disabled>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      Fecha de inscripcion:
+    </div>
+    <div class="col">
+      <input type="datetime-local" [(ngModel)]="userActual.fechaInscripcion" disabled>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      Mensualidad:
+    </div>
+    <div class="col">
+      <input type="text" [(ngModel)]="userActual.mensualidad" disabled>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button type="button" class="btn btn-primary" (click)="limpiar()">Limpiar</button>
+    </div>
+  </div>
+</div>
+
+
